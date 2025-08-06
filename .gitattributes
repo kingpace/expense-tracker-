@@ -207,3 +207,14 @@ export default function ExpenseForm() {
     </Card>
   );
 }
+services:
+  - type: web
+    name: expense-tracker
+    env: python
+    region: oregon
+    plan: free
+    buildCommand: poetry install
+    startCommand: python main.py
+git add render.yaml
+git commit -m "Add render.yaml for Poetry deploy"
+git push
