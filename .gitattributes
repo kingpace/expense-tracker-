@@ -210,7 +210,7 @@ export default function ExpenseForm() {
 services:
   - type: web
     name: expense-tracker
-    env: node
+    env: python
     region: oregon
     plan: free
     buildCommand: npm install && npm run build
