@@ -210,11 +210,11 @@ export default function ExpenseForm() {
 services:
   - type: web
     name: expense-tracker
-    env: python
+    env: node
     region: oregon
     plan: free
-    buildCommand: poetry install
-    startCommand: python main.py
-git add render.yaml
-git commit -m "Add render.yaml for Poetry deploy"
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    git add track\ expenses.txt render.yaml
+git commit -m "Switch Render deploy to Node.js for React app"
 git push
