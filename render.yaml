@@ -214,6 +214,11 @@ services:
     region: oregon
     plan: free
     buildCommand: npm install && npm run build
+mv "track expenses.txt" render.yaml
+git add render.yaml
+git commit -m "Rename to render.yaml for Render deploy"
+git push
+
     startCommand: npm start
     git add track\ expenses.txt render.yaml
 git commit -m "Switch Render deploy to Node.js for React app"
